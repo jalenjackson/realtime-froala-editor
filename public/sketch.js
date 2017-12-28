@@ -4,7 +4,7 @@ var text = {
 };
 
 function setup(){
-    socket = io.connect('http://localhost:8080');
+    socket = io.connect('https://realtime-editor-endpoint.herokuapp.com/' || 'http://localhost:8080');
     $("#text").on("froalaEditor.keyup", function(){
         var html = $(this).froalaEditor('html.get');
         var data = {
